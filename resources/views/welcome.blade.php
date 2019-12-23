@@ -1,99 +1,239 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Laravel</title>
+@section('slider')
+    @include('includes.slider')
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+@section('content')
+    <div class="colorlib-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="intro">It started with a simple idea: Create quality, well-designed products that I wanted myself.</h2>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+    <div class="colorlib-product">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="featured">
+                        <a href="#" class="featured-img" style="background-image: url({{asset('assets/images/men.jpg')}});"></a>
+                        <div class="desc">
+                            <h2><a href="#">Shop Men's Collection</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="featured">
+                        <a href="#" class="featured-img" style="background-image: url({{asset('assets/images/women.jpg')}});"></a>
+                        <div class="desc">
+                            <h2><a href="#">Shop Women's Collection</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="colorlib-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
+                    <h2>Best Sellers</h2>
+                </div>
+            </div>
+            <div class="row row-pb-md">
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="{{asset('assets/images/item-1.jpg')}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="{{asset('assets/images/item-2.jpg')}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Minam Meaghan</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="{{asset('assets/images/item-3.jpg')}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Men's Taja Commissioner</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="{{asset('assets/images/item-3.jpg')}}" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Russ Men's Sneakers</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-5.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-6.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-7.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-8.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-9.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-10.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-11.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-12.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-13.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-14.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-15.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 text-center">
+                    <div class="product-entry border">
+                        <a href="#" class="prod-img">
+                            <img src="images/item-16.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+                        </a>
+                        <div class="desc">
+                            <h2><a href="#">Women's Boots Shoes Maca</a></h2>
+                            <span class="price">$139.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><a href="#" class="btn btn-primary btn-lg">Shop All Products</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('partner')
+    @include('includes.partner')
+@endsection
