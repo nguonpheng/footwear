@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PublicController@index')->name('welcome');
 
-Route::get('/about', 'PublicController@index');
+Route::get('/about', 'PublicController@about')->name('about');
 
 Auth::routes();
 

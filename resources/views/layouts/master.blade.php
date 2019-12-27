@@ -46,7 +46,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="index.html">Footwear</a></div>
+							<div id="colorlib-logo"><a href="{{route('welcome')}}">Footwear</a></div>
 						</div>
 						<div class="col-sm-5 col-md-3">
 			            <form action="#" class="search-wrap">
@@ -72,7 +72,7 @@
 									</ul>
 								</li>
 								<li><a href="women.html">Women</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="{{route('about')}}">About</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
 							</ul>
