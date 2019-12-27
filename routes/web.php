@@ -15,6 +15,8 @@ Route::get('/', 'PublicController@index')->name('welcome');
 
 Route::get('/about', 'PublicController@about')->name('about');
 
+Route::get('/men', 'PublicController@men')->name('men');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
