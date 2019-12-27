@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
 
 class PublicController extends Controller
 {
@@ -16,7 +17,9 @@ class PublicController extends Controller
         return view('about');
     }
 
-    public function men(){
-        return view('men', ['products'=>'']);
+    public function type($id){
+        //$products = $category->products()->get();
+        $products = Category::find($id)->products()->paginate(12);
+        return view('men', ['products'=> $products]);
     }
 }
