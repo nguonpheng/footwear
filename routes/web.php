@@ -15,7 +15,7 @@ Route::get('/', 'PublicController@index')->name('welcome');
 
 Route::get('about', 'PublicController@about')->name('about');
 
-Route::get('type/{id}', 'PublicController@type')->name('type');
+Route::get('men', 'PublicController@men')->name('men');
 
 Auth::routes();
 

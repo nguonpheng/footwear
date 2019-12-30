@@ -17,9 +17,9 @@ class PublicController extends Controller
         return view('about');
     }
 
-    public function type($id){
+    public function men(){
         //$products = $category->products()->get();
-        $products = Category::find($id)->products()->paginate(12);
-        return view('men', ['products'=> $products]);
+        $products = Category::find(1)->products()->paginate(12);
+        return view('products', ['products'=> $products]);
     }
 }

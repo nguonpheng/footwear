@@ -63,7 +63,7 @@
 								<li class="{{\Request::route()->getName()=='welcome'?'active':''}}"><a href="{{route('welcome')}}">Home</a></li>
 								<li class="{{\Request::route()->getName()=='men'?'active':''}}">
 								<!-- <li class="has-dropdown"> -->
-									<a href="{{route('type', ['id' => 1])}}">Men</a>
+									<a href="{{route('men')}}">Men</a>
 									<!-- <ul class="dropdown">
 										<li><a href="product-detail.html">Product Detail</a></li>
 										<li><a href="cart.html">Shopping Cart</a></li>
