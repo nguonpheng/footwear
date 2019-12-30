@@ -72,7 +72,7 @@
 										<li><a href="add-to-wishlist.html">Wishlist</a></li>
 									</ul> -->
 								</li>
-								<li><a href="women.html">Women</a></li>
+								<li class="{{\Request::route()->getName()=='women'?'active':''}}"><a href="{{route('women')}}">Women</a></li>
 								<li class="{{\Request::route()->getName()=='about'?'active':''}}"><a href="{{route('about')}}">About</a></li>
 								<li><a href="contact.html">Contact</a></li>
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>

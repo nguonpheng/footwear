@@ -17,6 +17,8 @@ Route::get('about', 'PublicController@about')->name('about');
 
 Route::get('men', 'PublicController@men')->name('men');
 
+Route::get('women', 'PublicController@women')->name('women');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

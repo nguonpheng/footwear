@@ -22,4 +22,9 @@ class PublicController extends Controller
         $products = Category::find(1)->products()->paginate(12);
         return view('products', ['products'=> $products]);
     }
+
+    public function women(){
+        $products = Category::find(2)->products()->paginate(12);
+        return view('products', ['products'=> $products]);
+    }
 }
